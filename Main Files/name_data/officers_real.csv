@@ -1,0 +1,341 @@
+﻿Name;First name;Last name;Cartel;Doc id;a.k.a;Country;Impact report page
+;Joaquin ;GUZMAN LOERA ;SINALOA CARTEL ;1;Chapo GUZMAN ;Mexico;
+;Jorge Milton ;CIFUENTES VILLA ;SINALOA CARTEL ;1;Elkin de Jesus LOPEZ SALAZAR ;Colombia ;
+;Oscar;ALVAREZ ZEPEDA;SINALOA CARTEL ;1;;Mexico;
+;Joel;VALDEZ BENITES;SINALOA CARTEL ;1;;Mexico;
+;Alfredo ;ALVAREZ ZEPEDA ;SINALOA CARTEL ;1;Gabino ONTIVEROS RIOS;Mexico;
+;Carlos Mario ;TORRES HOYOS ;SINALOA CARTEL ;1;;Colombia ;
+;Dolly de Jesus ;CIFUETNES VILLA ;SINALOA CARTEL ;2;;Colombia ;
+;Hildebrando Alexander;CIFUENTES VILLA ;SINALOA CARTEL ;2;;Colombia ;
+;Omar;MEJIA ZULUAGA;SINALOA CARTEL ;2;;Colombia ;
+;Ana Maria;URIBE CIFUENTES;SINALOA CARTEL ;2;;Colombia ;
+;Mauricio ;BARCENAS RIVERA;SINALOA CARTEL ;2;;Colombia ;
+;Jesus Maria ;CASTRO;SINALOA CARTEL ;2;;Uruguay ;
+;Diego ;PEREZ HENAO ;LOS RASTROJOS ;3;"Diego VILLEGAS GOMEZ; Diego Rastrojo";Colombia ;
+;Javier Antonio;CALLE SERNA;North Valle Cartel;3;Comba ;;
+;Luis Enrique;CALLE SERNA;North Valle Cartel;3;Comba ;;
+;Wilber;VARELA;North Valle Cartel;3;Jabon ;;
+;Jaime Alberto;MARIN ZAMORA;North Valle Cartel;3;Beto Marin ;;
+;Jose Evaristo ;LINARES CASTILLO ;FARC ;4;Don Evaristo;Colombia ;
+;Isaac Perez ;GUBEREK RAVINOVICZ ;;5;ISAAC PEREZ GUBEREK RABINOVICH ;Colombia;
+;Henry ;GUBEREK GRIMBERG ;;5;;Colombia;
+;Jose Evaristo ;LINARES CASTILLO ;;5;;;
+;Ayman Saied ;JOUMAA ;;5;;;
+;Arieh ;GUBEREK GRIMBERG ;;5;;Colombia ;
+;Felipe ;GUBEREK GRIMBERG ;;5;;Colombia ;
+;David Felipe ;GUBEREK REYES ;;5;;Colombia ;
+;Sara ;GRIMBERG DE GUBEREK ;;5;;Colombia ;
+;Jorge Eduardo ;TOVAR ZULETA ;;5;;Colombia ;
+;Miguel Arcangel ;GARZON ACOSTA ;;5;;Colombia ;
+;Johanna Patricia ;CEBALLOS BUENO ;;5;;Colombia ;
+;Fernain ;RODRIGUEZ VASQUEZ ;;6;Abel Carrillo ;Colombia ;
+;Jorge ;FADLALLAH CHEAITELLY ;;6;;Colombia ;
+;Segundo Alberto;VILLOTA SEGURA;;6;;Colombia ;
+;Aldemar;VILLOTA SEGURA;;6;;Colombia ;
+;Hermes Alirio;CASANOVA ORDONEZ;;6;;Colombia ;
+;Luis Eduardo;CUELLAR CASTRO;;6;;Colombia ;
+;Luis Ramiro;QUINTERO CABALLERO;;6;;Colombia ;
+;Romez Jose ;SABAGH CAJELI ;;6;Ramzi SABAGH ;Colombia ;
+;Jonh Eduarth;MONJE ALVARADO;;6;;Colombia ;
+;Fredy Alonso;MIRA PEREZ;LA OFICINA DE ENVIGADO ;7;Fredy Colas;Colombia;
+;Pedro Claver ;MEJIA SALAZAR ;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Ayman Saied ;JOUMAA ;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Victor Gabriel;MEJIA ALZATE;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Juan Carlos;MEJIA ALZATE;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Andres Camilo;MEJIA ALZATE;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Jesus Rodolfo;BARCO MEJIA;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Jose Guillermo;BARCO MEJIA;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Jose Albeiro;BARCO MEJIA;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Rosalba;ALZATE GIRALDO;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Jose Alejandro;MEJIA ALZATE;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Maria Leivy;MEJIA ALZATE;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Humberto Antonio;BEDOYA ESPINOSA;LA OFICINA DE ENVIGADO ;7;;Colombia;
+;Henry de Jesús ;LOPEZ LONDOÑO ;LOS URABENOS;8;Mi Sangre;Colombia ;
+;Jairo de Jesus ;DURANGO RESTREPO ;LOS URABENOS;8;Guagua;Colombia ;
+;Carlos Antonio ;MORENO TUBERQUIA ;LOS URABENOS;8;Nicolas;Colombia ;
+;Luis Orlando ;PADIERNA PEÑA ;LOS URABENOS;8;Inglaterra;Colombia ;
+;Aristides Manuel ;MESA PAEZ ;LOS URABENOS;8;El Indio;Colombia ;
+;Cesar Daniel ;ANAYA MARTINEZ ;LOS URABENOS;8;Tierra;Colombia ;
+;Rafael ;ALVAREZ PIÑEDA ;LOS URABENOS;8;Chepe;Colombia ;
+;Dairo Antonio ;USUGA DAVID ;LOS URABENOS;8;;Colombia ;
+;Juan de Dios ;USUGA DAVID ;LOS URABENOS;8;;Colombia ;
+;Roberto ;VARGAS GUTIERREZ ;LOS URABENOS;8;;Colombia ;
+;Arley ;USUGA TORRES ;LOS URABENOS;8;Cero Siete;Colombia ;
+;Greilyn Fernando ;VARON CADENA;LOS URABENOS;8;Martin Bala;Colombia ;
+;Maribel ;VARON CADENA;LOS URABENOS;8;;Colombia ;
+;Ingrid Edith ;VARON CADENA;LOS URABENOS;8;;Colombia ;
+;Hector Mario ;URDINOLA ALVAREZ ;LOS URABENOS;8;Chicho;Colombia ;
+;Orlando ;GUTIERREZ RENDON ;LOS URABENOS;8;Negro Orlando ;Colombia ;
+;Alexander;MONTOYA USUGA;LOS URABENOS;8;Flaco Usuga;Colombia ;
+;Carlos Jose;ROBAYO ESCOBAR;LOS URABENOS;8;Guacamayo;Colombia ;
+;Cipriam Manuel ;PALENCIA GONZALEZ ;LOS URABENOS;8;Visaje;Colombia ;
+;Sor Teresa ;GOMEZ ALVAREZ ;LOS URABENOS;8;La Negra;Colombia ;
+;Fredy Alonso ;MIRA PEREZ ;LA OFICINA DE ENVIGADO ;9;Fredy Colas ;Colombia ;
+;Juan Carlos ; MESA VALLEJO;LA OFICINA DE ENVIGADO ;9;"Carlos Chatas; Tom";Colombia ;
+;Diego Alberto ;MUNOZ AGUDELO ;LA OFICINA DE ENVIGADO ;9;Diego Chamizo;Colombia ;
+;Julian Andrey ;GONZALEZ VASQUEZ ;LA OFICINA DE ENVIGADO ;9;Barny;Colombia ;
+;Freyner Alfonso ;RAMIREZ GARCIA ;LA OFICINA DE ENVIGADO ;9;Carlos Pesebre;Colombia ;
+;Didier de Jesus ;RIOS LOPEZ ;LA OFICINA DE ENVIGADO ;9;Tuto;Colombia ;
+;Rubiel ;MEDINA CARDONA ;LA OFICINA DE ENVIGADO ;9;Mono Amalfi;Colombia ;
+;Jesus David ;HERNANDEZ GRISALES ;LA OFICINA DE ENVIGADO ;9;Chaparro;Colombia ;
+;Edinson Rodolfo ;ROJAS ;LA OFICINA DE ENVIGADO ;9;Pichi;Colombia ;
+;José Berley ;GUARÍN LOAIZA;;10;El Ilustre;Colombia ;
+;Herman de Jesus ;MEDINA DIAZ ;;10;;Colombia ;
+;Gustavo ;BOLIVAR ZAPATA ;;10;;Colombia ;
+;Alexis Manuel ;ROMERO RODRIGUEZ ;;10;;Colombia ;
+;Luis Carlos ;BUSTAMANTE JARAMILLO ;;10;;Colombia ;
+;Walter ;VARELA VICTORIA ;;10;;Colombia ;
+;Juan Carlos ;MESA VALLEJO ;LA OFICINA DE ENVIGADO ;11;Tom ;Colombia ;
+;Octavio ;CARTAGENA BENITEZ ;"LA OFICINA DE ENVIGADO; LOS URABEÑOS";11;"Don Gabriel; Gabriel Paraco";Colombia ;
+;Juan Santiago ;GALLON HENAO ;LA OFICINA DE ENVIGADO ;11;;Colombia ;
+;Pedro David ;GALLON HENAO ;LA OFICINA DE ENVIGADO ;11;;Colombia ;
+;Reinaldo ;OCHOA MESA ;LA OFICINA DE ENVIGADO ;11;Natilla ;Colombia ;
+;Hugo Humberto ;GIRALDO OCHOA ;LA OFICINA DE ENVIGADO ;11;;Colombia ;
+;Omar Arturo ;ZABALA PADILLA ;FARC ;12;Lucas GUALDRON ;Colombia ;
+;Ivan ;GONZALEZ ZAMORANO ;FARC ;12;;Colombia ;
+;Jose Vicente ;PEÑA PACHECO ;FARC ;12;;Colombia ;
+;Adolfo ;FONNEGRA ESPEJO ;FARC ;12;;Colombia ;
+;Cristian David ;GONZALEZ MEJIA ;FARC ;12;;Colombia ;
+;Victor Alfonso ;MOSQUERA PEREZ ;LOS URABEÑOS/CLAN USUGA ;13;Negro Mosquera ;Colombia ;
+;Alveiro ;FEO ALVARADO ;LOS URABEÑOS/CLAN USUGA ;13;Benavides ;Colombia ;
+;Juan Carlos ;MESA VALLEJO ;LA OFICINA DE ENVIGADO ;14;Tom ;Colombia ;
+;Jorge Oswaldo ;ZAPATA BERRIO ;LA OFICINA DE ENVIGADO ;14;JONAS ;Colombia ;
+;Geova ;BURITICA HINCAPIE ;LA OFICINA DE ENVIGADO ;14;MI VIEJO ;Colombia ;
+;Edison ;MAYA RIOS ;LA OFICINA DE ENVIGADO ;14;GOMELO ;Colombia ;
+;Claudia Jannet;CASTILLO LONDONO;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Jose Bayron;PIEDRAHITA CEBALLOS;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Jose;PIEDRAHITA CASTILLO;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Andres;PIEDRAHITA CASTILLO;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Nelson Albeiro;PALACIO MONTOYA;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Nelson Fernando;JARMILLO ESTRADA;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Duber Astrid;GARCES GIRALDO;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;Leonardo;RUIZ PEREZ;LA OFICINA DE ENVIGADO ;15;;Colombia ;
+;German ;MUNOZ HOYOS;;16;;Colombia ;
+;Claudia Julieta;MURILLO SALAZAR;;16;;Colombia ;
+;Jhonny German;MUNOZ MEJIA;;16;;Colombia ;
+;Jonathan;MUNOZ MEJIA;;16;;Colombia ;
+;Eliana ;MUNOZ MEJIA;;16;;Colombia ;
+;Carlos Ivan ;MUNOZ HOYOS ;;16;;Colombia ;
+;Juan Carlos ;MESA VALLEJO ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Juan Santiago ;GALLON HENAO ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Pedro David ;GALLON HENAO ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Santiago ;ALVAREZ CASTRO ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Gabriel Jaime ;AGUILAR RAMIREZ ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Claudia Mercedes ;VARGAS GIRALDO ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Mariana ;GALLON ARISTIZABAL ;LA OFICINA DE ENVIGADO ;17;;Colombia ;
+;Tito Aldemar ;RUANO YANDUN ;;18;DON T;Colombia ;
+;Onofre Junior ;AGUINO ARBOLEDA ;;18;DIOS Y CIEGO;Colombia ;
+;Jorge Milton ;CIFUENTES VILLA ;SINALOA CARTEL ;19;Elkin de Jesus LOPEZ SALAZAR ;Colombia ;
+;Joaquin ;GUZMAN LOERA ;SINALOA CARTEL ;19;El Chapo ;Mexico ;
+;Francisco Ivan;CIFUENTES VILLA;SINALOA CARTEL ;19;CIFUENTES;;
+;Lucia Ines;CIFUENTES VILLA;SINALOA CARTEL ;19;;Colombia ;
+;Jaime Alberto;ROLL CIFUENTES;SINALOA CARTEL ;19;;Colombia ;
+;Dolly de Jesus ;CIFUETNES VILLA ;SINALOA CARTEL ;19;;Colombia ;
+;Carlina ;VILLA DE CIFUENTES ;SINALOA CARTEL ;19;;Colombia ;
+;Hildebrando Alexander ;CIFUENTES VILLA ;SINALOA CARTEL ;19;;Colombia ;
+;Alfredo ;ALVAREZ ZEPEDA ;SINALOA CARTEL ;19;Gabino ONTIVEROS RIOS ;Mexico ;
+;Marco Tulio ;FLOREZ SEPULVEDA ;SINALOA CARTEL ;19;;Colombia ;
+;Shimon Yalin;YELINEK;SINALOA CARTEL ;19;;Panama ;
+;Fabian Rodrigo;GALLEGO MARIN;SINALOA CARTEL ;19;;Colombia ;
+;Milton Geovany ;MARTINEZ GOMEZ ;SINALOA CARTEL ;19;;Colombia ;
+;Winston ;NICHOLLS EASTMAN ;SINALOA CARTEL ;19;;Colombia ;
+;Jose Luis ;GOMEZ PIQUERAS ;SINALOA CARTEL ;19;;Spain ;
+;David ;GOMEZ ORTIZ ;SINALOA CARTEL ;19;;Colombia ;
+;Juan Pablo Antonio;LONDONO RAMIREZ;SINALOA CARTEL ;19;;Colombia ;
+;Claudia Estela;LOPEZ MEJIA;SINALOA CARTEL ;19;;Colombia ;
+;Catalina Alexandra;MONTOYA ZAPATA;SINALOA CARTEL ;19;;Colombia ;
+;Juan Fernando;GONZALEZ JARAMILLO;SINALOA CARTEL ;19;;Colombia ;
+;Hector Mario ;CIFUENTES VILLA;SINALOA CARTEL ;19;;Colombia ;
+;Paula Andrea ;VARGAS CIFUENTES ;SINALOA CARTEL ;19;;Colombia ;
+;Teresa de Jesus ;CIFUENTES VILLA ;SINALOA CARTEL ;19;;Colombia ;
+;Edmon Felipe ;VARGAS CIFUENTES ;SINALOA CARTEL ;19;;Colombia ;
+;Jorge Andres;CIFUENTES OSORIO ;SINALOA CARTEL ;19;;Colombia ;
+;Ruben;RAYGOZA CONTRERAS;SINALOA CARTEL ;19;;Mexico ;
+;Irma Mery;BASTO DELGADO;SINALOA CARTEL ;19;;Colombia ;
+;Ana Yesennia;PACHECO PARRA;SINALOA CARTEL ;19;;Colombia ;
+;Milvia Yaneth;RESTREPO ZAPATA;SINALOA CARTEL ;19;;Colombia ;
+;Yenny Mabel;SANCHEZ PUENTES;SINALOA CARTEL ;19;;Colombia ;
+;Ana Patricia ;ROLDAN CARDONA ;SINALOA CARTEL ;19;;Colombia ;
+;Pablo Alberto ;GOMEZ ZULUAGA ;SINALOA CARTEL ;19;;Colombia ;
+;Joaquin ;GUZMAN LOERA ;SINALOA CARTEL ;20;El Chapo ;;
+;Juan Jose ;ESPARRAGOZA MORENO ;SINALOA CARTEL ;20;El Azul ;;
+;Ismael ;ZAMBADA GARCIA ;SINALOA CARTEL ;20;El Mayo ;;
+;Hugo ;CUELLAR HURTADO ;SINALOA CARTEL ;20;;Colombia ;
+;John Fredy ;CUELLAR SILVA ;SINALOA CARTEL ;20;;Colombia ;
+;Leonidas;VARGAS VARGAS;Medellin Cartel;20;;;
+;Lucy Amparo;VARGAS NUNEZ;SINALOA CARTEL ;20;;Colombia ;
+;Ofelia Margarita;MIRAMONTES GUTIERREZ;SINALOA CARTEL ;20;;Mexico;
+;Jenny Johanna ;CUELLAR SILVA ;SINALOA CARTEL ;20;;Colombia ;
+;Victor Hugo ;CUELLAR SILVA ;SINALOA CARTEL ;20;;Colombia ;
+;Gabriela ;AMARILLAS LOPEZ ;SINALOA CARTEL ;20;;Mexico ;
+;Gilberto Jose;RODRIGUEZ OREJUELA;Cali Cartel;21;;;12
+;Miguel Angel;RODRIGUEZ OREJUELA;Cali Cartel;21;;;12
+;Jose;SANTACRUZ LONDOÑO;Cali Cartel;21;;;12
+;Helmer;HERRERA BUITRAGO;Cali Cartel;21;;;12
+;Joaquin Mario;VALENCIA TRUJILLO;Cali Cartel;21;;;12
+;Guillermo;VALENCIA TRUJILLO;Cali Cartel;21;;;12
+;Ivan;URDINOLA GRAJALES;North Valle Cartel;21;;;13
+;Julio Fabio;URDINOLA GRAJALES;North Valle Cartel;21;;;13
+;Arcangel de Jesus;HENAO MONTOYA;North Valle Cartel;21;;;13
+;Juan Carlos;RAMIREZ ABADIA;North Valle Cartel;21;;;13
+;Victor Julio;PATIÑO FOMEQUE;North Valle Cartel;21;;;13
+;Diego Leon;MONTOYA SANCHEZ;North Valle Cartel;21;;;13
+;Luis Hernando;GOMEZ BUSTAMANTE;North Valle Cartel;21;;;13
+;Gabriel;PUERTA PARRA;North Valle Cartel;21;;;13
+;Luis Antonio;HERNANDEZ ZEA;North Valle Cartel;21;;;13
+;Carlos Alberto;RENTERIA MANTILLA;North Valle Cartel;21;;;13
+;Raul Alberto;GRAJALES LEMOS;North Valle Cartel;21;;;13
+;Wilber;VARELA;North Valle Cartel;21;;;13
+;Jhon Eidelber;CANO CORREA;North Valle Cartel;21;;;13
+;Orlando;SABOGAL ZULUAGA;North Valle Cartel;21;;;13
+;Julio Cesar;NASSER DAVID;North Coast Cartel;21;;;13
+;Jaime  ;RODRIGUEZ MONDRAGON;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Humberto  ;RODRIGUEZ MONDRAGON;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Maria Alexandra;RODRIGUEZ MONDRAGON;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;William;RODRIGUEZ ABADIA;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Carolina;RODRIGUEZ ARBELAEZ;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Claudia Pilar;RODRIGUEZ RAMIREZ;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Juan Carlos;MUNOZ RODRIGUEZ;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Maria Fernanda;RODRIGUEZ ARBELAEZ;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Andre Gilberto;RODRIGUEZ RAMIREZ;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Fernando Antonio;GUTIERREZ CANCINO;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Alfonso;GIL OSORIO;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Jaime Alberto;ARISTIZABAL ATEHORTUA;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Eduardo;MOGOLLON RUEDA;RODRIGUEZ OREJUELA ORGANIZATION;21;;;21
+;Diego Leon;MONTOYA SANCHEZ;NORTH VALLE CARTEL;21;;;136
+;Luis Hernando;GOMEZ BUSTAMA NTE;NORTH VALLE CARTEL;21;;;136
+;Arcangel de Jesus;HENAO MONTOYA;NORTH VALLE CARTEL;21;;;136
+;Vicente Antonio;Nuñez Tolbaños;Cali Cartel;21;;;138
+;Flor de Maria;Sanc emente Bedoya;Cali Cartel;21;;;138
+;Claudia Patricia;Sanc emente Bedoya;Cali Cartel;21;;;138
+;Adr ana;Orozco Niño;Cali Cartel;21;;;138
+;Andres Felipe;Roa Gutierrez;Cali Cartel;21;;;138
+;Andres Felipe;Idarraga Rios;Cali Cartel;21;;;138
+;Ignac o Garcia;de la Fuente Arriaga;Cali Cartel;21;;;138
+;Hernando;Gutierrez Mancipe;Cali Cartel;21;;;144
+;Fernando;Villota Galvis;Cali Cartel;21;;;144
+;William Edison;Jimenez Marin;Cali Cartel;21;;;144
+;Fernando;Gutierrez Cancino;Cali Cartel;21;;;144
+;Adriana;Santacoloma Hoyos;Cali Cartel;21;;;144
+;Gabriel;PUERTA PARRA;North Valle Drug Cartel;21;;;150
+;Jose Orlando;HENAO MONTOYA;North Valle Drug Cartel;21;;;150
+;Luis Antonio;HERNANDEZ ZEA;North Valle Drug Cartel;21;;;150
+;Piedad;VELEZ RENGIFO;North Valle Drug Cartel;21;;;150
+;Isabel Cristina;GALVEZ FERNANDEZ;North Valle Drug Cartel;21;;;150
+;Melba Rosa;RCE JARAMILLO;North Valle Drug Cartel;21;;;150
+;Hilda Nelly ;MERCHAN PERILLA;North Valle Drug Cartel;21;;;150
+;Alfonso;RAMIREZ VALDIVIESO;North Valle Drug Cartel;21;;;150
+;Manuel Antonio;CUBILLOS CORREDOR;North Valle Drug Cartel;21;;;150
+;Antonieta;NUMA SANJUAN;North Valle Drug Cartel;21;;;150
+;Alfonso;SANCHEZ LOPEZ;North Valle Drug Cartel;21;;;150
+;Luis Alfredo;GALLEGO RAMOS;North Valle Drug Cartel;21;;;150
+;Jaime Antonio;OLIVELLA CELEDON;North Valle Drug Cartel;21;;;150
+;Elsa Yaneth;TRIVINO RODRIGUEZ;North Valle Drug Cartel;21;;;150
+;Ana Elvia;HERNANDEZ ZEA;North Valle Drug Cartel;21;;;150
+;Oliverio;PEREZ NARVAEZ;North Valle Drug Cartel;21;;;150
+;William;VELEZ MONTES;North Valle Drug Cartel;21;;;150
+;Claudia Patricia;SANCLEMENTE BEDOYA;Cali Cartel;21;;;153
+;Efrain Hernan;SEPULVEDA ZAPATA;Cali Cartel;21;;;153
+;Maria Consuelo;IRAGORRI TORRES;Cali Cartel;21;;;153
+;Jorge Armando;ARDILA HUYO;Cali Cartel;21;;;153
+;Luis Alejandro;ARDILA HUYO;Cali Cartel;21;;;153
+;Luis Fernando;CARDENAS GONGORA;Cali Cartel;21;;;153
+;Carlos Arturo;CARDONA ACEVEDO;Cali Cartel;21;;;153
+;Sandra Patricia;BENAVIDES MONTENEGRO;Cali Cartel;21;;;153
+;Alberto;ROJAS VARGAS;Cali Cartel;21;;;153
+;Mario Jesus;CARRASCO URQUIZO;Cali Cartel;21;;;153
+;Carmen Rosa;MORALES ESPINAR;Cali Cartel;21;;;153
+;Gloria Isabel;MORA ROMERO;Cali Cartel;21;;;153
+;Luis Hernando;GUERRERO BRAND;Cali Cartel;21;;;153
+;Rene Alejandro;PEREZ RINCON;Cali Cartel;21;;;153
+;Juan Guillermo;URIVE CADAVID;Cali Cartel;21;;;153
+;Miryam Yaneth;ROJAS GOMEZ;Cali Cartel;21;;;153
+;Guido;CAMPO RAMIREZ;Cali Cartel;21;;;153
+;William;RODRIGUEZ ABADIA;Cali Cartel;21;;;153
+;Maria Ximena;WILSON GARCIA;Cali Cartel;21;;;153
+;Isabel Fernanda;GARCIA VASQUEZ;Cali Cartel;21;;;153
+;Fernando;GRANDE BENAVIDES;Cali Cartel;21;;;153
+;Jaime;MILLAN SALAS;Cali Cartel;21;;;153
+;Alicia;MONDRAGON AVILA;Cali Cartel;21;;;153
+;Andres Felipe;ROA GUTIERREZ;Cali Cartel;21;;;153
+;Alfredo;ROA MEJIA;Cali Cartel;21;;;153
+;Adriana;OROZCO NINO;Cali Cartel;21;;;153
+;Gonzalo;QUINTANA HERNANDEZ;Cali Cartel;21;;;153
+;Adriana;SANTACOLOMA HOYOS;Cali Cartel;21;;;153
+;Humberto;RODRIGUEZ MONDRAGON;Cali Cartel;21;;;153
+;Jaime;RODRIGUEZ MONDRAGON;Cali Cartel;21;;;153
+;Andre Gilberto;RODRIGUEZ RAMIREZ;Cali Cartel;21;;;153
+;Claudia Pilar;RODRIGUEZ RAMIREZ;Cali Cartel;21;;;153
+;Maria Alexandra;RODRIGUEZ MONDRAGON;Cali Cartel;21;;;153
+;Carlos Alberto;RENTERIA MANTILLA;North Valle Drug Cartel;21;;;156
+;Beatriz;RENTERIA CAICEDO;North Valle Drug Cartel;21;;;156
+;Maria Nury;CAICEDO GALLEGO;North Valle Drug Cartel;21;;;156
+;Maria;RENTERIA CAICEDO;North Valle Drug Cartel;21;;;156
+;Mauricio;PARDO OJEDA;North Valle Drug Cartel;21;;;156
+;Javier;CAMACHO VALLEJO;North Valle Drug Cartel;21;;;156
+;Luis Mario;CEDENO HERRERA;North Valle Drug Cartel;21;;;156
+;Jairo Camilo;COLLAZOS TELLO;North Valle Drug Cartel;21;;;156
+;Ivan;URDINOLA GRAJALES;North Valle Drug Cartel;21;;;159
+;Lorena;HENAO MONTOYA;North Valle Drug Cartel;21;;;159
+;Raul Alberto;GRAJALES LEMOS;North Valle Drug Cartel;21;;;159
+;Carlos Alberto;RENTERIA MANTILLA;North Valle Drug Cartel;21;;;159
+;Wilber;VARELA;North Valle Drug Cartel;21;;;162
+;Luis Enrique;CALLE SERNA;North Valle Drug Cartel;21;;;162
+;Jose Ignacio;BEDOYA VELEZ;North Valle Drug Cartel;21;;;162
+;Julio Cesar;LOPEZ PENA;North Valle Drug Cartel;21;;;162
+;Ramon;QUINTERO SANCLEMENTE;North Valle Drug Cartel;21;;;162
+;Roberto;LONDONO VELEZ;North Valle Drug Cartel;21;;;162
+;Jaime Alberto;MARIN ZAMORA;North Valle Drug Cartel;21;;;162
+;Eduardo;RESTREPO VICTORIA;North Valle Drug Cartel;21;;;162
+;Yolanda;SALAZAR ARCILA;North Valle Drug Cartel;21;;;162
+;Norma Constanza;RESTREPO VICTORIA;North Valle Drug Cartel;21;;;162
+;Maria Teresa;RESTREPO VICTORIA;North Valle Drug Cartel;21;;;162
+;Raul Alberto;GRAJALES LEMOS;North Valle Drug Cartel;21;;;164
+;Carlos Alberto;RENTERIA MANTILLA;North Valle Drug Cartel;21;;;164
+;Maria Sair;PELISSIER OSPINA;North Valle Drug Cartel;21;;;164
+;Armando Jacobo;JAAR JACIR;North Valle Drug Cartel;21;;;164
+;Ricardo;JAAR JASSIR;North Valle Drug Cartel;21;;;167
+;Moises Abdal;SAIEH MUVDI;North Valle Drug Cartel;21;;;167
+;Carlos Ernesto;SAIEH JAMIS;North Valle Drug Cartel;21;;;167
+;Francisco Javier;DU UE CORREA;North Valle Drug Cartel;21;;;167
+;Carmen Elena;SIMAN DE JAAR;North Valle Drug Cartel;21;;;167
+;Juan Carlos;RAMIREZ ABADIA;North Valle Drug Cartel;21;;;170
+;Omar;RAMIREZ PONCE;North Valle Drug Cartel;21;;;170
+;Carmen Alicia;ABADIA BASTIDAS;North Valle Drug Cartel;21;;;170
+;Edgar Marino;OTALORA RESTREPO;North Valle Drug Cartel;21;;;170
+;Jorge Rodrigo;SALINAS CUEVAS;North Valle Drug Cartel;21;;;170
+;Jhon Eidelber;CANO CORREA;North Valle Drug Cartel;21;;;173
+;Luis Hernando;GOMEZ BUSTAMANTE;North Valle Drug Cartel;21;;;173
+;Orlando;SABOGAL ZULUAGA;North Valle Drug Cartel;21;;;173
+;Carlos Alberto;GUILLEN JIMENEZ;North Valle Drug Cartel;21;;;173
+;Juan Pab o;CONTRERAS VIVAS;North Valle Drug Cartel;21;;;173
+;Alejandro ;CARDONA RIBILLAS;North Valle Drug Cartel;21;;;173
+;Yolando Sofia;CANO ALZATE;North Valle Drug Cartel;21;;;173
+;Juan Carlos;PATINO TORRES;North Valle Drug Cartel;21;;;173
+;Juan de a Cruz;GALLEGO CANO;North Valle Drug Cartel;21;;;173
+;Luis Alfonso;GOMEZ BUSTAMANTE;North Valle Drug Cartel;21;;;173
+;Wilmer de Jesus;GOMEZ BUSTAMANTE;North Valle Drug Cartel;21;;;173
+;Carlos Umberto;RESTREPO CLAVIJO;North Valle Drug Cartel;21;;;173
+;Juan Carlos;GIRALDO FRANCO;North Valle Drug Cartel;21;;;173
+;Jose Aldemar;RENDON RAMIREZ;North Valle Drug Cartel;21;;;173
+;Davinson;GOMEZ OCAMPO;North Valle Drug Cartel;21;;;173
+;Jaime;ROJAS FRANCO;North Valle Drug Cartel;21;;;173
+;Carlos Arturo;PATINO RESTREPO;North Valle Drug Cartel;21;;;173
+;Sandra Mi ena;HERNANDEZ ARBOLEDA;North Valle Drug Cartel;21;;;173
+;Carlos Alberto;RENTERIA MANTILLA;North Valle Drug Cartel;21;;;175
+;Ricardo;SANDOVAL SALAZAR;North Valle Drug Cartel;21;;;175
+;Andres Fernando;QUINTANA FUERTES;North Valle Drug Cartel;21;;;175
+;Jose Manuel;TRONCOSO POSSE;North Valle Drug Cartel;21;;;175
+;Oscar Ignacio;MARTAN RODRIGUEZ;North Valle Drug Cartel;21;;;175
+;James Au usto;OSORIO VALENCIA;North Valle Drug Cartel;21;;;175
+;Mauricio;PARDO OJEDA;North Valle Drug Cartel;21;;;175
+;Alfonso;BUENO GUERRERO;North Valle Drug Cartel;21;;;175
+;German;DUQUE JARAMILLO;North Valle Drug Cartel;21;;;175
+;Raul Alberto;GRAJALES LEMOS;North Valle Drug Cartel;21;;;181
+;Moises Abdal;SAIEH MUVDI;North Valle Drug Cartel;21;;;181
+;Abdala;SAIEH JASSIR;North Valle Drug Cartel;21;;;181
+;Carlos Ernesto;SAIEH JAMIS;North Valle Drug Cartel;21;;;181
+;Gloria Elena;FAJARDO HERNANDEZ;North Valle Drug Cartel;21;;;181
+;Hector;LEON;North Valle Drug Cartel;21;;;181
+;Sandra Milena;PRIETO SANTIAGO;North Valle Drug Cartel;21;;;181
+;Piedad Rocio;SANCHEZ CANDELO;North Valle Drug Cartel;21;;;181
