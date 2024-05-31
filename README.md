@@ -14,5 +14,5 @@ This repository contains main coding files and replicational data for analysis c
 
 
 ##### By
-Eirik Hiis Bergh
+Eirik Keilon Hiis Bergh
 Casper Lustrup Karlsen
