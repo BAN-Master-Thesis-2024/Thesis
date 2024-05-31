@@ -144,9 +144,7 @@ officers_adr <- match_officers %>%
   select(node_id, name, address) %>% 
   mutate(origin = "Officer")
 
-
-address_cl <- rbind(entities_adr, officers_adr)
-
+address_cl <- rbind(entities_adr, officers_adr) # Merge 
 
 # Filter unique addresses to avoid duplicate geocoding
 address_geo <- address_cl %>% 
@@ -154,7 +152,7 @@ address_geo <- address_cl %>%
   distinct(address)
 
 address_geo <- subset(address_geo, !grepl("^B & O BERMUDEZ & OCAMPO", address)) # Remove addresses causing API to stop 
-address_geo <- subset(address_geo, !grepl("^SUAREZ & ASOCIADO", address)) # Same here 
+address_geo <- subset(address_geo, !grepl("^SUAREZ & ASOCIADO", address)) # Same here
 
 address_geo <- address_geo %>% 
   filter(!row_number() %in% c(42))
@@ -201,8 +199,11 @@ for (i in 1:nrow(companies_cl))  {
 }
 
 # ------------------------------- # 
-# Add coordinates manually  # 
+# Add coordinates manually   # 
 # ------------------------------- # 
+
+# Adding coordinates for unsucccesful API calls.
+
 
 # Data with top addresses missing lat/lon
 missing_coord <- companies_cl %>% 
