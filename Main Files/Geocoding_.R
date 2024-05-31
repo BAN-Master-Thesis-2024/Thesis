@@ -162,7 +162,7 @@ address_geo <- address_geo %>%
 colnames(address_geo) <- "address_original"
 
 # Geocoding 
-API_key <- "AIzaSyBoFMX9DyD7cU467gj_5TbKEd31edHe0vE" # This needs to be your own unique API-key
+API_key <- " insert API " # This needs to be your own unique API-key
 register_google(key = API_key)
 
 # Geocoding 
