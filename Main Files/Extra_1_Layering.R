@@ -108,6 +108,8 @@ ggplot(med_coords, aes(x = lon, y = lat)) +
 # Layers for Maps in Thesis # 
 # ------------------------- # 
 
+# NB: Same code run for all maps due for easier debugging.
+
 # ----- # 
 # Colombia # 
 # ----- # 
@@ -206,11 +208,6 @@ ggplot() +
   theme_void() +
   theme(legend.position = "none",
         plot.background = element_rect(fill = "white", color = "transparent"))
-
-
-# Globus
-
-
 
 # ----- # 
 # Bahamas # 
@@ -630,9 +627,6 @@ panama_city_sf <- st_make_valid(panama_city$geometry)
 
 panama_city_sf <- st_transform(panama_city_sf, "+proj=longlat +datum=WGS84")
 
-ggplot() + 
-  geom_sf(data = panama_city_sf)
-
 # Coordinates 
 pan_coords <- st_filter(points_sf, panama_city_sf)
 
@@ -886,9 +880,6 @@ roads <- getbb("Genevra, Switzerland") %>%
                   value = c("trunk", "primary", "secondary", "tertiary", "residential")) %>%
   osmdata_sf()
 
-ggplot() + 
-  geom_sf(data = roads$osm_lines)
-
 # Forest
 forest <- getbb("Canton de Genève") %>%
   opq() %>% 
@@ -1000,15 +991,9 @@ venezuela <- venezuela %>%
 
 venezuela <- venezuela[c(1, 2, 3, 8, 18), ]
 
-ggplot() + 
-  geom_sf(data = venezuela)
-
-
-ven_coords <- st_filter(points_sf, venezuela)
-
-
+# Coords
+ven_coords <- st_filter(points_sf, venezuela) 
 ven_coords$coordinates <- st_coordinates(ven_coords)
-
 ven_coords$lon <- ven_coords$coordinates[, "X"]
 ven_coords$lat <- ven_coords$coordinates[, "Y"]
 
@@ -1118,16 +1103,8 @@ ecuador <- st_read("JSON/ecuador.geojson")
 ecuador <- ecuador %>% 
   filter(shapeName == "Quito")
 
-ggplot() + 
-  geom_sf(data = ecuador)
-
 # Coordinates
 ecu_coords <- st_filter(points_sf, ecuador)
-
-ggplot() + 
-  geom_sf(data = ecuador) + 
-  geom_sf(data = ecu_coords)
-
 
 ecu_coords$coordinates <- st_coordinates(ecu_coords)
 
