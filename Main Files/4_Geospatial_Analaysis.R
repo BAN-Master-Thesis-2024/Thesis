@@ -1,6 +1,8 @@
 # NHH - Master Thesis # 
 
+# --------------------------------- # 
 # 4 - Mapping 
+# --------------------------------- # 
 
 # Loading packages 
 library(devtools)
