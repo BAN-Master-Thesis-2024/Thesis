@@ -343,7 +343,6 @@ barplot2 <- ggplot(subtype[1:6, ], aes(x = subtype, y = n, fill = subtype)) +
   geom_text(aes(label = paste0(round(prop, 2), "%")),
             vjust = -0.5, size = 5, fontface = "bold")
 
-grid.arrange(barplot,  barplot2, ncol = 2)
 
 # Plot 3 - By jurisdiction
 # Subtype 
