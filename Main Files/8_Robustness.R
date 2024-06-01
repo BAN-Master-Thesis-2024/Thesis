@@ -1,3 +1,4 @@
+# Libraries
 library(tidyverse)
 library(parallel)
 library(tictoc)
@@ -5,7 +6,6 @@ library(anytime)
 library(lubridate)
 library(RecordLinkage) # Jaro-Winkler
 library(stringdist) # Q-gram distance
-
 
 ###### Robustness check officers -----------------
 
