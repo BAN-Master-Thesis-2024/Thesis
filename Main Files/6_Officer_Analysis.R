@@ -329,9 +329,6 @@ col_year <- officers_descriptive %>%
          tax_share = (tax_havens_officers/tot_officers)*100,
          col_share = (col_officers/tot_officers)*100)
 
-test <- officers_descriptive %>% 
-  group_by(country) %>% 
-  tally()
 
 # Plot
 ggplot() +
@@ -361,16 +358,16 @@ ggplot() +
 # Activity by jurisdiction
 jur_activity <- 
   officers_descriptive %>% 
-  filter(!active == 0) %>% 
-  distinct(node_id, jurisdiction, year) %>% 
+  filter(!active == 0) %>%  # Remove inactive 
+  distinct(node_id, jurisdiction, year) %>%  # Distinct connections to same entity 
   group_by(jurisdiction, year) %>% 
   tally() %>% 
   group_by(year) %>% 
-  mutate(total = sum(n)) %>% 
+  mutate(total = sum(n)) %>%  # Sum by year 
   group_by(year, jurisdiction) %>% 
-  mutate(share = n /total) %>% 
-  filter(year > 1989, year < 2016) %>% 
-  filter(jurisdiction %in% c("AW", "PMA", "BAH", "BM", "BVI", "BRB"))
+  mutate(share = n /total) %>%  # Share 
+  filter(year > 1989, year < 2016) %>%  # Filter for period between 1989 and 2015
+  filter(jurisdiction %in% c("AW", "PMA", "BAH", "BM", "BVI", "BRB")) # Filter for main havens
 
 # Flag
 jur_flag <- jur_activity %>% 
