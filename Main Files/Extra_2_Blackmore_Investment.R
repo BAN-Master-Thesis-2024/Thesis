@@ -127,7 +127,7 @@ ggplot() +
   theme(legend.position = "none") + 
   scale_x_continuous(limits = c(-70.08, -69.85))
 
-# test 
+# Coords
 awb_coords$coordinates <- st_coordinates(awb_coords)
 awb_coords$lon <- awb_coords$coordinates[, "X"]
 awb_coords$lat <- awb_coords$coordinates[, "Y"]
@@ -299,13 +299,5 @@ ggplot() +
         panel.background = element_rect(fill = "#f5f7fd")) + 
   xlim(1990, 2006) + 
   scale_color_manual(values = c("Start Year" = "darkgreen"))
-  
 
-officers_lg_blv <- officers %>% 
-  filter(node_id %in% c(relationships_ent$node_id_start))
 
-test <- relationships_ent %>% 
-  group_by(link) %>% 
-  tally()
-
-test$prop <- test$n / sum(test$n)
