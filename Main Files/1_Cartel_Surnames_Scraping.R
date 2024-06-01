@@ -239,64 +239,6 @@ names_df <- unique(names_df)
 last_names3 <- tibble(toupper(names_df$names))
 
 # -------------------------------------------------------------- #  
-#####     Policia Colombia - Los Mas Buscados (most wanted)  #####
-# -------------------------------------------------------------- #  
-
-# Note: Is this useful? Current most wanted individuals. 
-
-# Base URL
-url_base <- "https://oas.policia.gov.co/losmasbuscados?page="
-
-nr_pages <- c(0:10) # 11 pages of most wanted
-
-# Loop for extracting names for each page
-
-most_wanted <- data.frame() # List for saving
-
-# Patterns to remove
-name_pattern <- "Aplica(.*?)Alias"
-link_pattern <- " LINEA DIRECTA: .*? RECOMPENSA"
-
-for (i in nr_pages) {
-  
-  link <- paste0(url_base, i) # Link for each page
-  
-  # Saving output for each iteration
-  output <- read_html(link) %>% 
-    html_text()
-  
-  # Extracting data 
-  matches <- str_extract_all(output, name_pattern)
-  
-  results <- matches[[1]] 
-  
-  # Cleaning data
-  matches <- str_replace_all(results, "(Aplica|Alias)", "")
-  matches <- str_replace_all(matches, link_pattern, "")
-  matches <- str_replace_all(matches, "^\\S+\\s*", "")
-  matches <- str_replace_all(matches, "[^[:alnum:]]", " ") # Removing special characters 
-  matches <- str_replace_all(matches, "[[:digit:]]", " ")
-  matches <- str_squish(matches)
-  
-  matches_df <- tibble(matches)
-  
-  # Appending to dataframe 
-  most_wanted <- rbind(most_wanted, matches_df)
-
-}
-
-# Converting to string
-mw_string <- paste(most_wanted$matches, collapse = " ")
-
-# Tokenizing
-mw_tokens <- unlist(tokenize_ptb(mw_string))
-mw_tokens <- unique(mw_tokens)
-mw_tokens <- mw_tokens[str_length(mw_tokens) > 4] # Removing short words
-mw_tokens <- toupper(mw_tokens)
-mw_tokens <- mw_tokens[grep("[A-Z][A-Z]+", mw_tokens, ignore.case = FALSE)] # Keeping capital words
-
-
-# -------------------------------------------------------------- #  
 #####     Joining last-names together for final file         #####
 # -------------------------------------------------------------- #  
 
