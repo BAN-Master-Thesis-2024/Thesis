@@ -366,7 +366,7 @@ reg_data_cl <- reg_data %>%
 
 write.csv(reg_data_cl, "CSV-files/reg_data_cl.csv") # Save data 
 
-read.csv("CSV-files/reg_data_cl.csv")
+reg_data_cl <-read.csv("CSV-files/reg_data_cl.csv")
 
 
 # Standard effects 
@@ -500,7 +500,7 @@ cross_validate <- function(cv_data, k, model_type) {
   # model_type - type of model (plm, ols, lmer or rf)
   
   
-  set.seed(123) # For reproduction
+  set.seed(1) # For reproduction
 
   # Divide train-set into k folds 
   training_set <-  fold(cv_data, k = k, id_col = "entity_id_factor")
@@ -513,6 +513,7 @@ cross_validate <- function(cv_data, k, model_type) {
   performance_RMSE <- c() # RMSE
   performance_R2 <- c() # Standard R-squared
   performance_cor <- c() # Pearson correlation
+  performance_MAE <- c()
   
   # Loop for folds 
   for (fold in 1:k) {
@@ -534,10 +535,11 @@ cross_validate <- function(cv_data, k, model_type) {
                        model = "random",
                        effect = "time")
     
+      # Calculate MAE in normal terms
       
-      
-      # Extract RMSE 
+      # Extract RMSE and MAE
       predicted <- predict(plm_model, testing_fold, allow.new.levels = TRUE) # Predictions 
+      MAE <- mean(abs(exp(predicted) - exp(testing_fold[["log_nr_officers"]])))
       
       RMSE <- rmse_log(predicted, testing_fold[["log_nr_officers"]])
       
@@ -553,6 +555,7 @@ cross_validate <- function(cv_data, k, model_type) {
       performance_RMSE[fold] <- RMSE # RMSE 
       performance_R2[fold] <- R2[[1]] # R2
       performance_cor[fold] <- pearson_cor
+      performance_MAE[fold] <- MAE
 
     }
     
@@ -569,6 +572,7 @@ cross_validate <- function(cv_data, k, model_type) {
       rf_pred <- predict(rf_mod, testing_fold, allow.new.levels = TRUE)
       
       RMSE <- rmse_log(rf_pred, testing_fold[["log_nr_officers"]])
+      MAE <- mean(abs(exp(rf_pred) - exp(testing_fold[["log_nr_officers"]])))
       
       # Extract R2
       R2 <- mean(rf_mod$rsq) # Mean of R2 for all 500 trees 
@@ -581,6 +585,7 @@ cross_validate <- function(cv_data, k, model_type) {
       performance_RMSE[fold] <- RMSE # RMSE 
       performance_R2[fold] <- R2 # R2
       performance_cor[fold] <- pearson_cor
+      performance_MAE[fold] <- MAE
       
       
     }
@@ -595,6 +600,7 @@ cross_validate <- function(cv_data, k, model_type) {
       lmer_pred <- predict(lmer_mod, testing_fold, allow.new.levels = TRUE)
       
       RMSE <- rmse_log(lmer_pred, testing_fold[["log_nr_officers"]])
+      MAE <- mean(abs(exp(lmer_pred) - exp(testing_fold[["log_nr_officers"]])))
       
       # Extract R2 
       # Utilizing MuMIn-library to calculate marginal R2
@@ -607,6 +613,7 @@ cross_validate <- function(cv_data, k, model_type) {
       performance_RMSE[fold] <- RMSE # RMSE 
       performance_R2[fold] <- R2[[1]] # R2 for fixed-effects 
       performance_cor[fold] <- pearson_cor # Pearson correlation
+      performance_MAE[fold] <- MAE
       
     }
     
@@ -623,6 +630,7 @@ cross_validate <- function(cv_data, k, model_type) {
       ols_pred <- predict(plm_model, testing_fold, allow.new.levels = TRUE)
       
       RMSE <- rmse_log(ols_pred, testing_fold[["log_nr_officers"]])
+      MAE <- mean(abs(exp(ols_pred) - exp(testing_fold[["log_nr_officers"]])))
       
       
       # Extract R2
@@ -637,7 +645,46 @@ cross_validate <- function(cv_data, k, model_type) {
       performance_RMSE[fold] <- RMSE # RMSE 
       performance_R2[fold] <- R2[[1]] # Standard R2
       performance_cor[fold] <- pearson_cor # Pearson correlation
+      performance_MAE[fold] <- MAE
 
+    }
+    
+    # Standard OLS (Pooling PLM)
+    if (model_type == "within") {
+      
+      # pdata
+      pdata_test <- pdata.frame(testing_fold, c("entity_id", "year"))
+      pdata_train <- pdata.frame(training_fold, c("entity_id", "year"))
+      
+      # Train model 
+      within_mod <- plm(formula = log(nr_officers) ~ in_hotspot + cultivation_shock + aid_shock + post_pc,
+                       data = pdata_train,
+                       index = c("entity_id", "year"),
+                       model = "within")
+      
+  
+      
+      # Extract RMSE
+      within_pred <- predict(within_mod, newdata = pdata_test)
+      
+      RMSE <- rmse_log(ols_pred, testing_fold[["log_nr_officers"]])
+      MAE <- mean(abs(exp(ols_pred) - exp(testing_fold[["log_nr_officers"]])))
+      
+      
+      # Extract R2
+      sum <- summary(plm_model)
+      
+      R2 <- sum$r.squared
+      
+      # Correlation
+      pearson_cor <- cor(ols_pred, testing_fold[["log_nr_officers"]], method = "pearson")
+      
+      # Save data 
+      performance_RMSE[fold] <- RMSE # RMSE 
+      performance_R2[fold] <- R2[[1]] # Standard R2
+      performance_cor[fold] <- pearson_cor # Pearson correlation
+      performance_MAE[fold] <- MAE
+      
     }
 
  
@@ -646,7 +693,8 @@ cross_validate <- function(cv_data, k, model_type) {
   # Return mean RMSE, R2 and pearson-corr
   results <- data.frame(RMSE = mean(performance_RMSE),
                         R2 = mean(performance_R2),
-                        corr = mean(performance_cor))
+                        corr = mean(performance_cor),
+                        MAE = mean(performance_MAE))
   
   return(results)
   
@@ -669,7 +717,8 @@ performances_plm <- data.frame(model_type = c(),
                            folds = integer(),
                            RMSE = numeric(),
                            r_squared = numeric(),
-                           corr = numeric())
+                           corr = numeric(),
+                           MAE = numeric())
 
 for (i in 2:15) {
   
@@ -680,13 +729,15 @@ for (i in 2:15) {
   RMSE <- result[[1]]
   R2 <- result[[2]]
   pearson <- result[[3]]
+  MAE <- result[[4]]
   
   # Save in a df
   result <- data.frame(model_type = "plm",
                        folds = i,
                        rmse = RMSE,
                        r_squared = R2,
-                       corr = pearson)
+                       corr = pearson,
+                       MAE = MAE)
   
   # Append to initial df
   performances_plm <- rbind(performances_plm, result)
@@ -702,7 +753,8 @@ performances_ols <- data.frame(model_type = c(),
                                folds = integer(),
                                RMSE = numeric(),
                                r_squared = numeric(),
-                               corr = numeric())
+                               corr = numeric(),
+                               MAE = numeric())
 
 for (i in 2:15) {
   
@@ -713,6 +765,7 @@ for (i in 2:15) {
   RMSE <- result[[1]]
   R2 <- result[[2]]
   pearson <- result[[3]]
+  MAE <- result[[4]]
   
   
   # Save in a df
@@ -720,7 +773,8 @@ for (i in 2:15) {
                        folds = i,
                        rmse = RMSE,
                        r_squared = R2,
-                       corr = pearson)
+                       corr = pearson,
+                       MAE = MAE)
   
   # Append to initial df
   performances_ols <- rbind(performances_ols, result)
@@ -736,7 +790,8 @@ performances_lmer <- data.frame(model_type = c(),
                                folds = integer(),
                                RMSE = numeric(),
                                r_squared = numeric(),
-                               corr = numeric())
+                               corr = numeric(),
+                               MAE = numeric())
 
 for (i in 2:15) {
   
@@ -747,13 +802,15 @@ for (i in 2:15) {
   RMSE <- result[[1]]
   R2 <- result[[2]]
   pearson <- result[[3]]
+  MAE <- result[[4]]
   
   # Save in a df
   result <- data.frame(model_type = "lmer",
                        folds = i,
                        rmse = RMSE,
                        r_squared = R2,
-                       corr = pearson)
+                       corr = pearson,
+                       MAE = MAE)
   
   # Append to initial df
   performances_lmer <- rbind(performances_lmer, result)
@@ -768,7 +825,8 @@ performances_rf <- data.frame(model_type = c(),
                                 folds = integer(),
                                 RMSE = numeric(),
                                 r_squared = numeric(),
-                              corr = numeric())
+                              corr = numeric(),
+                              MAE = numeric())
 
 
 cl <- makeCluster(6)
@@ -782,13 +840,15 @@ for (i in 2:15) {
   RMSE <- result[[1]]
   R2 <- result[[2]]
   pearson <- result[[3]]
+  MAE <- result[[4]]
   
   # Save in a df
   result <- data.frame(model_type = "rf",
                        folds = i,
                        rmse = RMSE,
                        r_squared = R2,
-                       corr = pearson)
+                       corr = pearson,
+                       MAE = MAE)
   
   # Append to initial df
   performances_rf <- rbind(performances_rf, result)
@@ -796,11 +856,9 @@ for (i in 2:15) {
 }
 
 
-
-performances_full <- rbind(performances_lmer, performances_ols, performances_plm, performances_rf)
+performances_full <- rbind(performances_lmer, performances_ols, performances_plm)
 
 write.csv(perfomances_full, "CSV-files/performance_metrics.csv")
-
 
 
 # ------ # 
@@ -812,24 +870,21 @@ performances_full$full_name <- ifelse(performances_full$model_type == "ols", "Po
 performances_full$full_name <- ifelse(performances_full$model_type == "plm", "Random Effects", performances_full$full_name)
 
 
-performances_full <- performances_full %>% 
-  filter(!model_type == "rf")
-
 # RMSE plot 
 ggplot() + 
-  geom_line(data = performances_full, aes(x = folds, y = exp(rmse), color = full_name)) +
-  geom_point(data = performances_full, aes(x = folds, y = exp(rmse), color = full_name, shape = full_name)) + 
+  geom_line(data = performances_full, aes(x = folds, y = rmse, color = full_name)) +
+  geom_point(data = performances_full, aes(x = folds, y = rmse, color = full_name, shape = full_name)) + 
   labs(y = "RMSE", x = "K-Fold", title = "K-Fold Validation for RMSE") + 
   ggthemes::theme_fivethirtyeight() + 
   theme(panel.grid.major = element_blank(),
         axis.line = element_line(colour = "black"),
-        axis.title.x = element_text(face = "bold", size = 15),
-        axis.title.y = element_text(face = "bold", size = 15),
-        axis.text.x = element_text(size = 15),
-        axis.text.y = element_text(size = 15),
+        axis.title.x = element_text(face = "bold", size = 20),
+        axis.title.y = element_text(face = "bold", size = 20),
+        axis.text.x = element_text(size = 20),
+        axis.text.y = element_text(size = 20),
         legend.position = "bottom",
         legend.title = element_blank(),
-        legend.text = element_text(size = 15),
+        legend.text = element_text(size = 20),
         legend.background = element_blank(),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white")) +
@@ -845,14 +900,14 @@ ggplot() +
   ggthemes::theme_fivethirtyeight() + 
   theme(panel.grid.major = element_blank(),
         axis.line = element_line(colour = "black"),
-        axis.title.x = element_text(face = "bold", size = 15),
-        axis.title.y = element_text(face = "bold", size = 15),
-        axis.text.x = element_text(size = 15),
-        axis.text.y = element_text(size = 15),
+        axis.title.x = element_text(face = "bold", size = 20),
+        axis.title.y = element_text(face = "bold", size = 20),
+        axis.text.x = element_text(size = 20),
+        axis.text.y = element_text(size = 20),
         legend.position = "bottom",
         legend.title = element_blank(),
         legend.background = element_blank(),
-        legend.text = element_text(size = 15),
+        legend.text = element_text(size =20),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white")) +
   scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) + 
@@ -867,18 +922,49 @@ ggplot() +
   ggthemes::theme_fivethirtyeight() + 
   theme(panel.grid.major = element_blank(),
         axis.line = element_line(colour = "black"),
-        axis.title.x = element_text(face = "bold", size = 15),
-        axis.title.y = element_text(face = "bold", size = 15),
-        axis.text.x = element_text(size = 15),
-        axis.text.y = element_text(size = 15),
+        axis.title.x = element_text(face = "bold", size = 20),
+        axis.title.y = element_text(face = "bold", size = 20),
+        axis.text.x = element_text(size = 20),
+        axis.text.y = element_text(size = 20),
         legend.position = "bottom",
         legend.title = element_blank(),
         legend.background = element_blank(),
-        legend.text = element_text(size = 15),
+        legend.text = element_text(size = 20),
         plot.background = element_rect(fill = "white"),
         panel.background = element_rect(fill = "white")) + 
   scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) + 
   scale_y_continuous(breaks = scales::pretty_breaks(n = 5))
+
+
+# MAE plot 
+ggplot() + 
+  geom_line(data = performances_full, aes(x = folds, y = MAE, color = full_name)) + 
+  geom_point(data = performances_full, aes(x = folds, y = MAE, color = full_name, shape = full_name)) + 
+  labs(y = "MAE", x = "K-Fold", title = "K-Fold Validation for MAE") + 
+  ggthemes::theme_fivethirtyeight() + 
+  theme(panel.grid.major = element_blank(),
+        axis.line = element_line(colour = "black"),
+        axis.title.x = element_text(face = "bold", size = 20),
+        axis.title.y = element_text(face = "bold", size = 20),
+        axis.text.x = element_text(size = 20),
+        axis.text.y = element_text(size = 20),
+        legend.position = "bottom",
+        legend.title = element_blank(),
+        legend.background = element_blank(),
+        legend.text = element_text(size = 20),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white")) + 
+  scale_x_continuous(breaks = scales::pretty_breaks(n = 10)) + 
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 5))
+
+
+
+# Other Diagnostics 
+
+# ------------------------- # 
+# -- Residual Plots ------- #
+# ------------------------- # 
+
 
 
 # ------------------------- # 
@@ -909,3 +995,6 @@ ggplot(data = reg_data_cl, aes(x = factor(post_pc), y = nr_officers)) +
   theme_ipsum() +
   theme(legend.position = "none")
 
+
+
+?plm
