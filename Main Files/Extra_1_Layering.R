@@ -1,4 +1,7 @@
-# Layer Figure # 
+# Layer Figures # 
+
+# Layering for key tax havens. 
+# Runned in conjuction with 4_Geospatial_Analysis. 
 
 # Packages
 library(tidyverse)
