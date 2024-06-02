@@ -1,4 +1,4 @@
-# NHH - 7: Multiple Regression with Panel-Data # 
+# NHH - 7:  Panel Regression # 
 
 # Master Thesis # 
 
@@ -958,15 +958,6 @@ ggplot() +
   scale_y_continuous(breaks = scales::pretty_breaks(n = 5))
 
 
-
-# Other Diagnostics 
-
-# ------------------------- # 
-# -- Residual Plots ------- #
-# ------------------------- # 
-
-
-
 # ------------------------- # 
 # ----- Box-Plots --------- #
 # ------------------------- # 
@@ -994,7 +985,3 @@ ggplot(data = reg_data_cl, aes(x = factor(post_pc), y = nr_officers)) +
   geom_jitter(alpha = 0.3, size = 0.2) +
   theme_ipsum() +
   theme(legend.position = "none")
-
-
-
-?plm
