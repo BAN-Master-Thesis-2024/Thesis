@@ -12,7 +12,7 @@ This repository contains main coding files and replicational data for analysis c
 
 
 ## Interactive Map
-An interactive map containing all geocoded addresses located in the data can be found at Rpubs:
+An interactive map containing all geocoded coordinates in the data obtained from ICIJ can be found at RPubs:
 
 https://rpubs.com/EirikHiis/1191208
 
