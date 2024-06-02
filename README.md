@@ -11,7 +11,10 @@ Unveiling the Presence of Colombian Cartels in Offshore Tax Havens
 This repository contains main coding files and replicational data for analysis conducted for our master thesis at NHH during the Spring of 2024. 
 
 
+## Interactive Map
+An interactive map containing all geocoded addresses located in the data can be found at Rpubs:
 
+https://rpubs.com/EirikHiis/1191208
 
 ##### By
 Eirik Keilon Hiis Bergh
